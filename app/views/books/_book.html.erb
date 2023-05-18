@@ -1,12 +1,23 @@
-<div id="<%= dom_id book %>">
   <p>
     <strong>Name:</strong>
-    <%= book.name %>
+    <%= @book.name %>
   </p>
 
   <p>
     <strong>Genre:</strong>
-    <%= book.genre %>
+    <%= @book.genre %>
   </p>
+ 
+  <% if @book.image.attached? %>
+    <p>
+    <strong>image:</strong>
+    <%= image_tag(@book.image) %>    
+    </p> 
+  <% end %>
+  </p> 
 
-</div>
+
+
+
+
+

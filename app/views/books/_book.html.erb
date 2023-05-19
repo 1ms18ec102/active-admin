@@ -1,20 +1,28 @@
+  
+
   <p>
     <strong>Name:</strong>
-    <%= @book.name %>
+    <%= book.name %>
   </p>
 
   <p>
     <strong>Genre:</strong>
-    <%= @book.genre %>
+    <%= book.genre %>
   </p>
  
-  <% if @book.image.attached? %>
+  <% if book.image.attached? %>
     <p>
     <strong>image:</strong>
-    <%= image_tag(@book.image) %>    
+    <%= image_tag(book.image) %>    
     </p> 
   <% end %>
   </p> 
+  <p>
+    <%= link_to "Show this book", book %>
+  </p>
+
+  <br>
+  -----------------------------------------------------
 
 
 

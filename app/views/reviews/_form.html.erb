@@ -1,22 +1,45 @@
-<%= form_for :review do |form| %>
-  <% if review.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+<style>
+page_wrap
+{
+    border: 1px solid black;
+    width: 250px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body
+{
+    text-align: center; 
+}
+</style>
 
-      <ul>
-        <% review.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="body">
+  div class="page_wrap" >
+    <%= form_for [@book, @review]  do |form| %>
+      <% if @review.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
-  <div>
-    <%= form.label :comment, style: "display: block" %>
-    <%= form.text_field :comment %>
+          <ul>
+            <% review.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div style="width: 325px; margin-left: 570px;">
+        <%= form.label :comment, style: "display: block" %>
+        <%= form.text_field :comment %>
+      </div>
+
+      <div>
+        <%= form.number_field :book_id ,value: @book.id, type: :hidden  %>
+      </div>
+     
+      <div>
+        <%= form.submit %>
+      </div>
+    <% end %>
   </div>
- 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

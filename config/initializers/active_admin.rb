@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Active Admin Project"
+  config.site_title = "Book Author Project"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -336,4 +336,13 @@ ActiveAdmin.setup do |config|
   # You can switch to using Webpacker here.
   #
   # config.use_webpacker = true
+
+
+  config.namespace :admin do |admin|
+    admin.build_menu do |menu|
+      menu.add label: "The Application", url: "http://127.0.0.1:3000", priority: 0
+    end
+  end
+
+
 end

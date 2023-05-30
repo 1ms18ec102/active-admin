@@ -8,7 +8,7 @@ class Book < ApplicationRecord
 
 	def send_mail
 		# debugger
-		TosaveWorker.perform_async(self.id)
-		# BookMailer.book_send(book_id).deliver_later
+		EmailsentJob.perform_later(self.id)
+		# BookMailer.book_send(self.id).deliver_later
 	end
 end

@@ -1,9 +1,6 @@
-class BookMailer
-
-	def book_send(book)
-		# @user=user
-		@book=book
-		mail to: "abc@mail.com", subject: "book_added", from: "1ms18ec102@gmail.com"
-	end	
-
+class BookMailer < ApplicationMailer
+	def book_send(book_id)
+		@book=book_id
+		mail(to: "abc@mail.com", subject: 'Book Created', from: "savanawanti@gamil.com")
+	end
 end

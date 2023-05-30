@@ -34,7 +34,7 @@ gem "jbuilder"
 # gem "kredis"
 
 gem 'devise'
-
+gem 'rubocop', require: false
 gem 'activeadmin'
 
 

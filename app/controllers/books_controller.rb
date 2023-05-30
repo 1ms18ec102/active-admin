@@ -32,7 +32,8 @@ class BooksController < ApplicationController
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
-  end
+    # debugger
+    end
 
   # PATCH/PUT /books/1 or /books/1.json
   def update

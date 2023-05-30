@@ -37,6 +37,7 @@ gem 'devise'
 
 gem 'activeadmin'
 
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -48,6 +49,9 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
+
+gem 'sidekiq', '~> 7.1', '>= 7.1.1'
+gem 'redis-rails'
 
 # gem 'sassc', '1.12.1'
 
